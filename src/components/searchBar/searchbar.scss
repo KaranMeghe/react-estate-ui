@@ -42,7 +42,7 @@
       border: none;
       width: 200px;
       padding: 0px 10px;
-      outline: none;
+      outline: focus;
 
       @include lg {
         padding: 2px 5px;
