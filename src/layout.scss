@@ -6,20 +6,22 @@
   margin-left: auto;
   margin-right: auto;
   padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+
+  .content {
+    flex: 1;
+  }
 
   @include lg {
-    background-color: rgb(213, 159, 139);
     max-width: 1280px;
   }
 
   @include md {
-    background-color: rgb(140, 193, 140);
     max-width: 768px;
   }
 
   @include sm {
-    // background-color: rgb(228, 228, 130);
-    background-color: #fff;
     max-width: 640px;
   }
 }
