@@ -8,6 +8,12 @@
 
     .wrapper {
       padding-right: 50px;
+      padding-bottom: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 50px;
+      overflow-y: scroll;
+      height: 100%;
     }
   }
   .mapContainer {
