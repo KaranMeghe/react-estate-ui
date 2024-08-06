@@ -6,6 +6,7 @@ function App() {
   // Lazy Loading
   const ListPage = lazy(() => import("./routes/listPage/ListPage"));
   const SinglePage = lazy(() => import("./components/SinglePage/SinglePage"));
+  const ProfilePage = lazy(() => import("./routes/Profile/ProfilePage"));
 
   const router = createBrowserRouter([
     {
@@ -29,6 +30,14 @@ function App() {
           element: (
             <Suspense>
               <SinglePage />
+            </Suspense>
+          ),
+        },
+        {
+          path: "/profile",
+          element: (
+            <Suspense>
+              <ProfilePage />
             </Suspense>
           ),
         },
