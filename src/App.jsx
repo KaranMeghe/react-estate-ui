@@ -5,6 +5,7 @@ import { Layout, HomePage } from "./routes";
 function App() {
   // Lazy Loading
   const ListPage = lazy(() => import("./routes/listPage/ListPage"));
+  const SinglePage = lazy(() => import("./components/SinglePage/SinglePage"));
 
   const router = createBrowserRouter([
     {
@@ -20,6 +21,14 @@ function App() {
           element: (
             <Suspense>
               <ListPage />
+            </Suspense>
+          ),
+        },
+        {
+          path: `/:id`,
+          element: (
+            <Suspense>
+              <SinglePage />
             </Suspense>
           ),
         },
